@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       backgroundImage:{
         "home": "url('/assets/bonp.png')"
+      },
+      colors: {
+        cafe:"#987d6b"
       }
     },
   },
