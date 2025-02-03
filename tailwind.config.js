@@ -6,8 +6,8 @@ module.exports = {
       backgroundImage:{
         "home": "url('/assets/bonp.png')"
       },
-      colors: {
-        cafe:"#987d6b"
+      cor: {
+        cafe:'#f5f5dc'
       }
     },
   },
