@@ -1,173 +1,177 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/output.css">
     <link rel="stylesheet" href="styles/style.css">
     <title>Hematomas Burguer</title>
 </head>
+
 <body class="bg-gradient-to-t from-purple-300 to-yellow-800">
     <header class="w-full h-[420px] bg-home bg-cover bg-center">
         <div class="flex flex-col items-center justify-center w-full h-full bg-orange-400">
-            <img src="assets/logo.png" alt="logo"
-            class="w-32 h-32 duration-200 rounded-full hover:scale-110"   
-            />
-            
+            <img src="assets/logo.png" alt="logo" class="w-32 h-32 duration-200 rounded-full hover:scale-110" />
+
             <h1 class="mt-4 mb-2 text-4xl font-extrabold text-white">
                 Hematomas Burguer
             </h1>
             <span class="font-extrabold text-white">Rua Tereza Gonzales Romero 36, Embu Guaçu</span>
-        
-        
-        <div class="px-4 py-1 mt-4 bg-green-600 rounded-lg" id="date-span">
-            <span class="font-extrabold text-white">
-                Seg á sex - 18:00 as 02:00
-            </span>
+
+
+            <div class="px-4 py-1 mt-4 bg-green-600 rounded-lg" id="date-span">
+                <span class="font-extrabold text-white">
+                    Seg á sex - 18:00 as 02:00
+                </span>
+            </div>
         </div>
-    </div>
     </header>
+    <!--Start of Menu-->
     <div class="mb-6 text-2xl font-bold text-center md:text-5xl mt-9 ">
         <h1>Nosso Menu</h1>
     </div>
-        <div id="menu">
-            <main class="grid grid-cols-1 px-2 mx-auto mb-16 md:grid-cols-2 md:gap-10 gap-7 max-w-7xl">
-                <div class="flex gap-2">
-                    <img src="assets/hamb-1.png" alt="smash-1" class="duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28"/>
-
-                    <div class="px-3">
-                        <p class="px-3 font-bold">Hambúrguer Clássico</p>
-                        <p class="text-sm">Carne suculenta grelhada, queijo derretido, alface crocante, tomate fresco, cebola caramelizada e picles, entre pão macio, com molho especial. Simples, saboroso e irresistível! 🍔✨</p>
-
-                        <div class="flex items-center justify-between gap-2 mt-3">
-                            <p class="text-lg font-bold">R$ 18.90</p>
-                            <button class="px-5 bg-gray-900 rounded add-to-cart-btn"
-                                data-name="Hambúrguer Clássico"
-                                data-price="18.90"
-                            >
-                                <i class="text-lg text-white fa fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="flex gap-2">
-                    <img src="assets/hamb-2.png" alt="smash-1" class="duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28"/>
-
-                    <div class="px-3">
-                        <p class="px-3 font-bold">Hambúrguer smash</p>
-                        <p class="text-sm">Carne finamente prensada na chapa até formar crosta caramelizada, dupla camada de queijo derretido, cebola picada no grelha e molho especial, servido em pão brioche macio. Textura crocante por fora, suculento por dentro! 🧀🔥</p>
-
-                        <div class="flex items-center justify-between gap-2 mt-3">
-                            <p class="text-lg font-bold">R$ 22.99</p>
-                            <button class="px-5 bg-gray-900 rounded add-to-cart-btn"
-                                data-name="Hambúrguer smash"
-                                data-price="22.99"
-                            >
-                                <i class="text-lg text-white fa fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-
-                <div class="flex gap-2">
-                    <img src="assets/hamb-2.png" alt="smash-1" class="duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28"/>
-
-                    <div class="px-3">
-                        <p class="px-3 font-bold">Hambúrguer smash</p>
-                        <p class="text-sm">Carne finamente prensada na chapa até formar crosta caramelizada, dupla camada de queijo derretido, cebola picada no grelha e molho especial, servido em pão brioche macio. Textura crocante por fora, suculento por dentro! 🧀🔥</p>
-
-                        <div class="flex items-center justify-between gap-2 mt-3">
-                            <p class="text-lg font-bold">R$ 22.99</p>
-                            <button class="px-5 bg-gray-900 rounded add-to-cart-btn"
-                                data-name="Hambúrguer smash"
-                                data-price="22.99"
-                            >
-                                <i class="text-lg text-white fa fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex gap-1">
-                    <img src="assets/hamb-1.png" alt="smash-1" class="duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28"/>
-
-                    <div class="px-3">
-                        <p class="px-3 font-bold">Hambúrguer Clássico</p>
-                        <p class="text-sm">Carne suculenta grelhada, queijo derretido, alface crocante, tomate fresco, cebola caramelizada e picles, entre pão macio, com molho especial. Simples, saboroso e irresistível! 🍔✨</p>
-
-                        <div class="flex items-center justify-between gap-2 mt-3">
-                            <p class="text-lg font-bold">R$ 18.90</p>
-                            <button class="px-5 bg-gray-900 rounded add-to-cart-btn"
-                                data-name="Hambúrguer Clássico"
-                                data-price="18.90"
-                            >
-                                <i class="text-lg text-white fa fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="flex gap-2">
-                    <img src="assets/hamb-2.png" alt="smash-1" class="duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28"/>
-
-                    <div class="px-3">
-                        <p class="px-3 font-bold">Hambúrguer smash</p>
-                        <p class="text-sm">Carne finamente prensada na chapa até formar crosta caramelizada, dupla camada de queijo derretido, cebola picada no grelha e molho especial, servido em pão brioche macio. Textura crocante por fora, suculento por dentro! 🧀🔥</p>
-
-                        <div class="flex items-center justify-between gap-2 mt-3">
-                            <p class="text-lg font-bold">R$ 22.99</p>
-                            <button class="px-5 bg-gray-900 rounded add-to-cart-btn"
-                                data-name="Hambúrguer smash"
-                                data-price="22.99"
-                            >
-                                <i class="text-lg text-white fa fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-
-                <div class="flex gap-2">
-                    <img src="assets/hamb-2.png" alt="smash-1" class="duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28"/>
-
-                    <div class="px-3">
-                        <p class="px-3 font-bold">Hambúrguer smash</p>
-                        <p class="text-sm">Carne finamente prensada na chapa até formar crosta caramelizada, dupla camada de queijo derretido, cebola picada no grelha e molho especial, servido em pão brioche macio. Textura crocante por fora, suculento por dentro! 🧀🔥</p>
-
-                        <div class="flex items-center justify-between gap-2 mt-3">
-                            <p class="text-lg font-bold">R$ 22.99</p>
-                            <button class="px-5 bg-gray-900 rounded add-to-cart-btn"
-                                data-name="Hambúrguer smash"
-                                data-price="22.99"
-                            >
-                                <i class="text-lg text-white fa fa-cart-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </main>
-            <div class="w-full px-2 mx-auto my-2 text-3xl font-bold bg-white  mx-w-7xl">
-                <h2 class="w-full text-center ">Bebidas</h2>
-            </div>
+    <div id="menu">
+        <main class="grid w-full grid-cols-1 px-2 mx-auto mb-16 md:grid-cols-2 md:gap-10 gap-7 max-w-7xl">
             <div class="flex gap-2">
-                <img src="assets/refri-2.png" alt="smash-1" class="duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28"/>
+                <img src="assets/hamb-1.png" alt="smash-1"
+                    class="duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28" />
 
                 <div class="px-3">
-                    <p class="px-3 font-bold">Refrigerante Quaraná</p>
+                    <p class="px-3 font-bold">Hambúrguer Clássico</p>
+                    <p class="text-sm">Carne suculenta grelhada, queijo derretido, alface crocante, tomate fresco,
+                        cebola caramelizada e picles, entre pão macio, com molho especial. Simples, saboroso e
+                        irresistível! 🍔✨</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="text-lg font-bold">R$ 18.90</p>
+                        <button class="px-5 bg-gray-900 rounded add-to-cart-btn" data-name="Hambúrguer Clássico"
+                            data-price="18.90">
+                            <i class="text-lg text-white fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flex gap-2">
+                <img src="assets/hamb-2.png" alt="smash-1"
+                    class="duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28" />
+
+                <div class="px-3">
+                    <p class="px-3 font-bold">Hambúrguer smash</p>
+                    <p class="text-sm">Carne finamente prensada na chapa até formar crosta caramelizada, dupla camada de
+                        queijo derretido, cebola picada no grelha e molho especial, servido em pão brioche macio.
+                        Textura crocante por fora, suculento por dentro! 🧀🔥</p>
+
                     <div class="flex items-center justify-between gap-2 mt-3">
                         <p class="text-lg font-bold">R$ 22.99</p>
-                        <button class="px-5 bg-gray-900 rounded add-to-cart-btn"
-                            data-name="Hambúrguer smash"
-                            data-price="22.99"
-                        >
+                        <button class="px-5 bg-gray-900 rounded add-to-cart-btn" data-name="Hambúrguer smash"
+                            data-price="22.99">
+                            <i class="text-lg text-white fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flex gap-2">
+                <img src="assets/hamb-2.png" alt="queijo-1"
+                    class="duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28" />
+
+                <div class="px-3">
+                    <p class="px-3 font-bold">Hambúrguer Queijo</p>
+                    <p class="text-sm">Um hambúrguer de queijo suculento, com carne grelhada no ponto perfeito, coberto por queijo derretido e acompanhado de pão macio. Simples, clássico e irresistível! 🍔🧀</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="text-lg font-bold">R$ 25.99</p>
+                        <button class="px-5 bg-gray-900 rounded add-to-cart-btn" data-name="Hambúrguer Queijo"
+                            data-price="25.99">
+                            <i class="text-lg text-white fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-1">
+                <img src="assets/hamb-1.png" alt="tudão"
+                    class="duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28" />
+
+                <div class="px-3">
+                    <p class="px-3 font-bold">Hambúrguer Tudão</p>
+                    <p class="text-sm">O X-Tudo é o rei dos hambúrgueres! Carne suculenta, queijo derretido, bacon crocante, ovo, alface, tomate, cebola e maionese, tudo no pão perfeito. Uma explosão de sabores em cada mordida. 🍔👑</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="text-lg font-bold">R$ 35.90</p>
+                        <button class="px-5 bg-gray-900 rounded add-to-cart-btn" data-name="Hambúrguer Tudão"
+                            data-price="35.90">
+                            <i class="text-lg text-white fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flex gap-2">
+                <img src="assets/hamb-2.png" alt="vegano"
+                    class="duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28" />
+
+                <div class="px-3">
+                    <p class="px-3 font-bold">Hambúrguer Vegano</p>
+                    <p class="text-sm">Um hambúrguer vegano cheio de sabor e textura! Feito com uma base de grãos, legumes e temperos, grelhado e servido com pão integral, alface, tomate e um toque de molho especial. Saudável, sustentável e delicioso! 🍔🌱 🧀🔥</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="text-lg font-bold">R$ 45.99</p>
+                        <button class="px-5 bg-gray-900 rounded add-to-cart-btn" data-name="Hambúrguer Vegano"
+                            data-price="45.99">
+                            <i class="text-lg text-white fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flex gap-2">
+                <img src="assets/hamb-2.png" alt="Frnago"
+                    class="duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28" />
+
+                <div class="px-3">
+                    <p class="px-3 font-bold">Hambúrguer Frango Mash</p>
+                    <p class="text-sm">Um hambúrguer de frango suculento e saboroso, grelhado no ponto certo e temperado com ervas. Servido em pão macio, com alface fresca, tomate e um toque de maionese. Leve, delicioso e perfeito para qualquer ocasião! 🍔🐔</p>
+
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="text-lg font-bold">R$ 19.99</p>
+                        <button class="px-5 bg-gray-900 rounded add-to-cart-btn" data-name="Frango Mash"
+                            data-price="19.99">
+                            <i class="text-lg text-white fa fa-cart-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--end of menu-->
+
+ <!--start of drinks-->
+            <div class="w-full px-2 mx-auto my-2 text-3xl font-bold mx-w-7xl">
+                <h2 class="w-full mb-10 text-center">Bebidas</h2>
+            </div>
+<div class="grid w-full grid-cols-1 px-2 mx-auto mb-16 md:grid-cols-2 md:gap-10 gap-7 max-w-7xl">
+            <div class="flex gap-2">
+                <img src="assets/refri-1.png" alt="coca-cola"
+                    class="mb-10 duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28" />
+
+                <div class="px-3">
+                    <p class="px-3 mt-5 font-bold">Coca-Cola</p>
+                <div class="flex items-center justify-between gap-3 mt-5">
+                        <p class="text-lg font-bold">R$ 6.99</p>
+                        <button class="px-5 mx-5 bg-gray-900 rounded add-to-cart-btn" data-name="Coca-Cola"
+                            data-price="6.99">
                             <i class="text-lg text-white fa fa-cart-plus"></i>
                         </button>
                     </div>
@@ -175,30 +179,89 @@
             </div>
 
             <div class="flex gap-2">
-                <img src="assets/refri-1.png" alt="smash-1" class="duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28"/>
+                <img src="assets/pepsi.png" alt="pepsi"
+                    class="mb-20 duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28" />
 
                 <div class="px-3">
-                    <p class="px-3 font-bold">Refrigerante Coca-Cola</p>
-                    <div class="flex items-center justify-between gap-2 mt-3">
-                        <p class="text-lg font-bold">R$ 22.99</p>
-                        <button class="px-5 bg-gray-900 rounded add-to-cart-btn"
-                            data-name="Hambúrguer smash"
-                            data-price="22.99"
-                        >
+                    <p class="px-3 mt-5 font-bold">Pepsi</p>
+                <div class="flex items-center justify-between gap-3 mt-5">
+                        <p class="text-lg font-bold">R$ 4.99</p>
+                        <button class="px-5 mx-5 bg-gray-900 rounded add-to-cart-btn" data-name="Pepsi"
+                            data-price="4.99">
                             <i class="text-lg text-white fa fa-cart-plus"></i>
                         </button>
                     </div>
                 </div>
             </div>
+
+    
+                <div class="flex gap-2 mt-2">
+                    <img src="assets/refri-2.png" alt="quarana"
+                        class="mb-20 duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28" />
+    
+                    <div class="px-3">
+                    <p class="px-3 mt-5 font-bold">Quaraná</p>
+                    <div class="flex items-center justify-between gap-3 mt-5">
+                            <p class="text-lg font-bold">R$ 5.99</p>
+                            <button class="px-5 mx-5 bg-gray-900 rounded add-to-cart-btn" data-name="Quaraná"
+                                data-price="5.99">
+                                <i class="text-lg text-white fa fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="flex gap-2">
+                    <img src="assets/CERVEJA-CORONA-LATAO-473ML-PILSEN.png" alt="corona"
+                        class="mb-20 duration-300 rounded-md hover:scale-110 hover:-rotate-2 w-28 h-28" />
+    
+                    <div class="px-3">
+                        <p class="px-3 mt-5 font-bold">Cerveja Corona</p>
+                    <div class="flex items-center justify-between gap-3 mt-5">
+                            <p class="text-lg font-bold">R$ 12.00</p>
+                            <button class="px-5 mx-5 bg-gray-900 rounded add-to-cart-btn" data-name="Cerveja Corona"
+                                data-price="12.00">
+                                <i class="text-lg text-white fa fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+</div>
+            <!--end of drinks-->
+            
+    <!--modal card-->
+    <div class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60  z-[99]  items-center justify-center hidden">
+        <div class="p-5 bg-white rounded-md min-w-[99%]">
+            <h2 class="mb-2 text-2xl font-bold">Minhas Compras</h2>
+            
+            <div id="cart-items" class="flex flex-col justify-between mb-2"></div>
+            <p class="font-bold">total:  <span id="card-total">0.00</span></p>
+            <p>Endereço de Entrega:</p>
+            <input type="text" placeholder="Digite seu Endereço completo"
+            id="address"
+            class="w-full p-1 my-1 border-2 rounded"/>
+            <p class="hidden text-red-500" id="address-warn">Digite seu endereço completo</p>
+            
+            <div class="flex items-center justify-between w-full mt-5">
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn" class="px-4 py-1 font-bold text-white bg-green-500 rounded">Finalizar Pedido!!</button>
+            </div>
+            
         </div>
+        
+    </div>
+    <!--fim modal card-->
 
-        <footer class="fixed bottom-0 z-40 flex items-center justify-center w-full py-1 bg-red-500">
-            <button class="flex items-center gap-2 font-bold text-white"
-            id="cart-btn">
-                (<span id="cart-count">2</span>)
-                Olhe o Carrinho
-                    <i class="text-lg text-white fa fa-cart-plus"></i>
+    
+        <footer class="fixed bottom-0 z-20 flex justify-center w-full h-8 bg-gray-100 bg-red-500">
+            <button class="flex items-center gap-2 font-bold text-white">
+                (<span>0</span>)
+                Acompanhe seu carrinho
+                <i class="text-lg text-white fa fa-cart-plus"></i>
             </button>
         </footer>
+
+
 </body>
+
 </html>
