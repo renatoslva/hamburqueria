@@ -33,6 +33,7 @@
             </div>
         </div>
     </header>
+    
     <!--Start of Menu-->
     <div class="mb-6 text-2xl font-bold text-center md:text-5xl mt-9 ">
         <h1>Nosso Menu</h1>
@@ -230,7 +231,7 @@
             <!--end of drinks-->
             
     <!--modal card-->
-    <div class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60  z-[99]  items-center justify-center hidden">
+    <div  id="cart-modal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60  z-[99]  items-center justify-center hidden">
         <div class="p-5 bg-white rounded-md min-w-[99%]">
             <h2 class="mb-2 text-2xl font-bold">Minhas Compras</h2>
             
@@ -254,14 +255,14 @@
 
     
         <footer class="fixed bottom-0 z-20 flex justify-center w-full h-8 bg-gray-100 bg-red-500">
-            <button class="flex items-center gap-2 font-bold text-white">
-                (<span>0</span>)
+            <button id="cart-btn" class="flex items-center gap-2 font-bold text-white">
+                (<span id="cart-count">0</span>)
                 Acompanhe seu carrinho
                 <i class="text-lg text-white fa fa-cart-plus"></i>
             </button>
         </footer>
 
-
+<script src="script.js"></script>
 </body>
 
 </html>
