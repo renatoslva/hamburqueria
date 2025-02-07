@@ -49,9 +49,23 @@ menu.addEventListener("click", function(event){
 //função para adicionar no carrinho
 
 function addToCart(name, price){
-    cart.push({
-    name,
-    price,
-    quantity: 1,
-})
+    const existingItem = cart.find(item => item.name === name)
+
+        if(existingItem){
+            existingItem.quantity += 1;
+        
+        }else{
+            cart.push({
+                name,
+                price,
+                quantity: 1,
+            })
+        }
+        updateCartModel()
+}
+
+function updateCartModel(){
+    cartItemsContainer.innerHTML = "";
+    let total = 0;
+    
 }
