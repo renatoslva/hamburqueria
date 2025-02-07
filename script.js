@@ -16,6 +16,7 @@ let cart = [];
 //Abrir modal
 
 cartBtn.addEventListener("click", function(){
+    updateCartModel()
     cartModal.style.display = "flex"
 })
 
@@ -68,4 +69,42 @@ function updateCartModel(){
     cartItemsContainer.innerHTML = "";
     let total = 0;
     
+    cart.forEach(item => {
+        const cartItemElement = document.createElement("div");
+        cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col")
+
+        cartItemElement.innerHTML =`
+        <div class="flex items-center justify-between">
+            <div>
+                    <p class="font-bold">${item.name}</p>
+                        <p class="font-bold mt-1">QTD: ${item.quantity}</p>
+                        <p class="font-bold mt-1">${Number(item.price).toFixed(2)}</p>
+            </div>
+                    <button>
+                        Remover
+                            </button>
+
+        </div>
+        `
+            total += item.price * item.quantity
+
+        cartItemsContainer.appendChild(cartItemElement)
+    })
+        cartTotal.textContent = total.toLocaleString("pt-br",{
+            style: "currency",
+            currency: "BRL"
+        });
+//mudando o numero do footer
+        cartCounter.innerHTML = cart.length;
 }
+
+//função para remover do carrinho
+
+cartItemsContainer.addEventListener("click", function(event){
+    if(event.target.classList.contains("remove-from-cart-btn")){
+        const name = event.target.getAttribute("data-name")
+
+        removeItemCart(name):
+    }
+})
+
