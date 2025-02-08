@@ -80,7 +80,7 @@ function updateCartModel(){
                         <p class="font-bold mt-1">QTD: ${item.quantity}</p>
                         <p class="font-bold mt-1">${Number(item.price).toFixed(2)}</p>
             </div>
-                    <button>
+                    <button class="remove-from-cart-btn" data-name="${item.name}">
                         Remover
                             </button>
 
@@ -104,7 +104,20 @@ cartItemsContainer.addEventListener("click", function(event){
     if(event.target.classList.contains("remove-from-cart-btn")){
         const name = event.target.getAttribute("data-name")
 
-        removeItemCart(name):
+        removeItemCart(name);
     }
 })
 
+function removeItemCart(name){
+    const index = cart.findIndex(item => item.name === name);
+
+    if(index !== -1){
+        const item = cart[index];
+
+        if(item.quantity > 1){
+            item.quantity -= 1;
+            updateCartModel();
+            return;
+        }
+    }
+}

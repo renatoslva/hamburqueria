@@ -61,7 +61,7 @@ function updateCartModel() {
   cart.forEach(function (item) {
     var cartItemElement = document.createElement("div");
     cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col");
-    cartItemElement.innerHTML = "\n        <div class=\"flex items-center justify-between\">\n            <div>\n                    <p class=\"font-bold\">".concat(item.name, "</p>\n                        <p class=\"font-bold mt-1\">QTD: ").concat(item.quantity, "</p>\n                        <p class=\"font-bold mt-1\">").concat(Number(item.price).toFixed(2), "</p>\n            </div>\n                    <button>\n                        Remover\n                            </button>\n\n        </div>\n        ");
+    cartItemElement.innerHTML = "\n        <div class=\"flex items-center justify-between\">\n            <div>\n                    <p class=\"font-bold\">".concat(item.name, "</p>\n                        <p class=\"font-bold mt-1\">QTD: ").concat(item.quantity, "</p>\n                        <p class=\"font-bold mt-1\">").concat(Number(item.price).toFixed(2), "</p>\n            </div>\n                    <button class=\"remove-from-cart-btn\" data-name=\"").concat(item.name, "\">\n                        Remover\n                            </button>\n\n        </div>\n        ");
     total += item.price * item.quantity;
     cartItemsContainer.appendChild(cartItemElement);
   });
@@ -80,3 +80,19 @@ cartItemsContainer.addEventListener("click", function (event) {
     removeItemCart(name);
   }
 });
+
+function removeItemCart(name) {
+  var index = cart.findIndex(function (item) {
+    return item.name === name;
+  });
+
+  if (index !== -1) {
+    var item = cart[index];
+
+    if (item.quantity > 1) {
+      item.quantity -= 1;
+      updateCartModel();
+      return;
+    }
+  }
+}
