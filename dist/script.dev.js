@@ -94,5 +94,79 @@ function removeItemCart(name) {
       updateCartModel();
       return;
     }
+
+    cart.splice(index, 1);
+    updateCartModel();
   }
+} //ENVIANDO ENDEREÇO 
+
+
+addressInput.addEventListener("input", function (event) {
+  var inputValue = event.target.value;
+
+  if (inputValue !== "") {
+    addressInput.classList.remove("border-red-500");
+    addresswarn.classList.add("hidden");
+  }
+});
+checkoutBtn.addEventListener("click", function () {
+  //finalizando pedido
+  var isOpen = checkRestauranteOpen();
+
+  if (!isOpen) {
+    Toastify({
+      //para um alert mais bonito 
+      text: "No momento estamos fechados abriremos a partir das 18h",
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top",
+      // `top` or `bottom`
+      position: "center",
+      // `left`, `center` or `right`
+      stopOnFocus: true,
+      // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)"
+      },
+      onClick: function onClick() {} // Callback after click
+
+    }).showToast();
+    return;
+  }
+
+  if (cart.length === 0) return;
+
+  if (addressInput.value === "") {
+    addresswarn.classList.remove("hidden");
+    addressInput.classList.add("border-red-500");
+    return;
+  } //enviar pedido com api whats
+
+
+  var cartItems = cart.map(function (item) {
+    return " ".concat(item.name, " | Quantidade: (").concat(item.quantity, ") | Pre\xE7o: R$").concat(item.price, " \n");
+  }).join("");
+  var message = encodeURIComponent(cartItems);
+  var phone = "#";
+  window.open("https://wa.me/".concat(phone, "?text=").concat(message, " Endere\xE7o: ").concat(addressInput.value), "_blank");
+  cart = [];
+  updateCartModel();
+}); //VEREIFICAR A HORA E MANIPULAR O CART
+
+function checkRestauranteOpen() {
+  var data = new Date();
+  var hora = data.getHours();
+  return hora >= 18 && hora < 23; //true = restaurante aberto
+}
+
+var spanItem = document.getElementById("date-span");
+var isOpen = checkRestauranteOpen();
+
+if (isOpen) {
+  spanItem.classList.remove("bg-red-500");
+  spanItem.classList.add("bg-green-600");
+} else {
+  spanItem.classList.remove("bg-green-600");
+  spanItem.classList.add("bg-red-500");
 }
