@@ -134,24 +134,24 @@ addressInput.addEventListener("input", function (event) {
 })
 
 checkoutBtn.addEventListener("click", function () {
-//finalizando pedido
-const isOpen = checkRestauranteOpen();
-if(!isOpen){
-    Toastify({ //para um alert mais bonito 
-        text: "No momento estamos fechados abriremos a partir das 18h",
-        duration: 3000,
-        newWindow: true,
-        close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "center", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
-        },
-        onClick: function(){} // Callback after click
-      }).showToast();
-    return;
-}
+    //finalizando pedido
+    const isOpen = checkRestauranteOpen();
+    if (!isOpen) {
+        Toastify({ //para um alert mais bonito 
+            text: "No momento estamos fechados abriremos a partir das 18h",
+            duration: 3000,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+            onClick: function () {} // Callback after click
+        }).showToast();
+        return;
+    }
 
 
     if (cart.length === 0) return;
@@ -160,21 +160,21 @@ if(!isOpen){
         addressInput.classList.add("border-red-500")
         return;
     }
-//enviar pedido com api whats
+    //enviar pedido com api whats
 
-const cartItems = cart.map((item) => {
-    return (
-        ` ${item.name} | Quantidade: (${item.quantity}) | Preço: R$${item.price} \n`
-    )
-}).join("");
+    const cartItems = cart.map((item) => {
+        return (
+            ` ${item.name} | Quantidade: (${item.quantity}) | Preço: R$${item.price} \n`
+        )
+    }).join("");
 
-const message = encodeURIComponent(cartItems)
-const phone = "#"
+    const message = encodeURIComponent(cartItems)
+    const phone = "#"
 
-window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank");
+    window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank");
 
-cart = [];
-updateCartModel();
+    cart = [];
+    updateCartModel();
 
 })
 
